@@ -17,7 +17,7 @@ chatWindow.innerHTML = `<div class="msg assistant">👋 Hello! How can I help yo
 
 // Function to get a response from OpenAI API
 async function getAIResponse() {
-  const endpoint = "https://api.openai.com/v1/chat/completions";
+  const endpoint = "https://beautybotwd8.zackaryallen.workers.dev/";
   const data = {
     model: "gpt-4o",
     messages: conversation, // Send the full conversation history
@@ -28,7 +28,6 @@ async function getAIResponse() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify(data),
     });
